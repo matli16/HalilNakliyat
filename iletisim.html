@@ -11,7 +11,11 @@
    <meta name="theme-color" content="#d62f2f">
    
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-   
+   <!-- Font Awesome (İkonlar için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet.js CSS (Harita için) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
    <!-- CSS Dosyaları -->
    <link href="css/bootstrap.min.css" rel="stylesheet"/>
    <link href="css/aos.css" rel="stylesheet"/>
@@ -21,7 +25,7 @@
    <link rel="stylesheet" href="css/style.css" />
 </head>
    <body>
-       <!-- ============================================================
+        <!-- ============================================================
          TOP BAR
          ============================================================ -->
 <div id="topbar" class="py-2 bg-dark text-white">
@@ -71,7 +75,7 @@
 
     </div>
   </div>
-</div><div class="tsoc">
+</div> <div class="tsoc">
                      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                   </div>
@@ -108,94 +112,79 @@
          </div>
       </nav>
  
- <section id="services" class="py-5 bg-white">
-   <div class="container">
-      <div class="text-center mb-5" data-aos="fade-up">
-         <span class="slbl" style="color: #d62f2f; font-weight: 600;">Neler Yapıyoruz?</span>
-         <h2 class="fw-bold" style="font-size: 2.5rem;">Profesyonel <span>Hizmetlerimiz</span></h2>
-         <div class="sline" style="width: 50px; height: 3px; background-color: #d62f2f; margin: 15px auto;"></div>
-      </div>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card contact-card p-4 p-md-5">
+                
+                <h2 class="text-center mb-4 fw-bold text-dark">Bizimle İletişime Geçin</h2>
+                <p class="text-center text-muted mb-5">Sorularınız, fiyat teklifleri ve nakliye talepleriniz için aşağıdaki kanallardan bize ulaşabilirsiniz.</p>
 
-      <div class="row g-4">
-         <!-- Hizmet 1 -->
-         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="p-4 rounded-4 shadow-sm h-100 text-center position-relative" style="border: 1px solid #e1e1e1; background-color: #fff;">
-               <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger" style="font-size: 0.75rem; padding: 5px 10px;">%100 Profesyonel</span>
-               <div class="mb-3 mt-2" style="color: #d62f2f;"><i class="fas fa-home fa-3x"></i></div>
-               <h3 class="h5 fw-bold mb-2">Evden Eve Nakliyat</h3>
-               <hr class="text-danger mx-auto my-2" style="width: 40px; height: 3px; opacity: 1;">
-               <p class="text-muted small" style="text-align: justify; text-justify: inter-word;">Bursa genelinde ve özellikle Görükle bölgesinde evinizi anahtar teslim, mobilya söküm ve montaj dahil olmak üzere tamamen profesyonelce taşıyoruz.</p>
+                <div class="row g-4">
+                    <!-- Sol Kolon: İletişim Bilgileri ve WhatsApp -->
+                    <div class="col-md-5 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="info-icon text-center"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="ms-3">
+                                    <h6 class="fw-bold mb-0">Adresimiz</h6>
+                                    <small class="text-muted">Görükle,Bursa, Türkiye</small>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="info-icon text-center"><i class="fa-solid fa-phone"></i></div>
+                                <div class="ms-3">
+                                    <h6 class="fw-bold mb-0">Telefon</h6>
+                                    <small class="text-muted">+90 (554) 844 16 91</small>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="info-icon text-center"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="ms-3">
+                                    <h6 class="fw-bold mb-0">E-posta</h6>
+                                    <small class="text-muted">mega.sus20@gmail.com</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Yönlendirme Butonu -->
+<!-- ... Üstteki İletişim Bilgileri (Telefon, E-posta) bittikten hemen sonra ... -->
+
+<!-- WhatsApp Yönlendirme Butonu -->
+<div class="text-center text-md-start mt-4">
+    <p class="text-muted small mb-2"><i class="fa-regular fa-clock"></i> 7/24 Aktif Destek Hattı</p>
+    
+    <!-- YENİ BUTON KODUNU BURAYA YAPIŞTIRACAKSIN -->
+    <a href="https://api.whatsapp.com/send?phone=905548441691&text=Merhaba,%20nakliye%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." 
+       target="_blank" 
+       class="btn-whatsapp">
+        <i class="fa-brands fa-whatsapp fa-lg"></i>
+        WhatsApp ile İletişime Geç
+    </a>
+
+</div>
+
+<!-- ... Sağ taraftaki Harita kolonunun başladığı yer (<div class="col-md-7">) ... -->
+                    </div>
+
+                    <!-- Sağ Kolon: Güvenli Yuvarlak Alanlı Harita -->
+                    <div class="col-md-7">
+                        <div class="mb-2 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-secondary"><i class="fa-solid fa-map-location-dot me-1"></i> Konumumuz</span>
+                            <span class="badge bg-light text-muted border" style="font-size: 0.75rem;">Yaklaşık 100m alan gösterilmektedir</span>
+                        </div>
+                        <!-- Haritanın yükleneceği div -->
+                        <div id="map"></div>
+                    </div>
+                </div>
+
             </div>
-         </div>
-
-         <!-- Hizmet 2 -->
-         <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="p-4 rounded-4 shadow-sm h-100 text-center position-relative" style="border: 1px solid #e1e1e1; background-color: #fff;">
-               <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger" style="font-size: 0.75rem; padding: 5px 10px;">%100 Güvenli</span>
-               <div class="mb-3 mt-2" style="color: #d62f2f;"><i class="fas fa-shield-alt fa-3x"></i></div>
-               <h3 class="h5 fw-bold mb-2">Sigortalı Taşımacılık</h3>
-               <hr class="text-danger mx-auto my-2" style="width: 40px; height: 3px; opacity: 1;">
-               <p class="text-muted small" style="text-align: justify; text-justify: inter-word;">Bursa Halil Nakliyat olarak tüm taşıma süreçlerini sözleşmeli ve sigortalı olarak yürütüyoruz. Eşyalarınızın güvenliğini garanti altına alarak olası risklere karşı sıfır mağduriyet sunuyoruz.</p>
-            </div>
-         </div>
-
-         <!-- Hizmet 3 -->
-         <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="p-4 rounded-4 shadow-sm h-100 text-center position-relative" style="border: 1px solid #e1e1e1; background-color: #fff;">
-               <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger" style="font-size: 0.75rem; padding: 5px 10px;">%100 Zamanında</span>
-               <div class="mb-3 mt-2" style="color: #d62f2f;"><i class="fas fa-globe-americas fa-3x"></i></div>
-               <h3 class="h5 fw-bold mb-2">Şehirler Arası Nakliyat</h3>
-               <hr class="text-danger mx-auto my-2" style="width: 40px; height: 3px; opacity: 1;">
-               <p class="text-muted small" style="text-align: justify; text-justify: inter-word;">Bursa'dan Türkiye'nin her yerine, uzun yol şartlarına uygun geniş araç filomuz ve sigortalı taşımacılık güvencemizle eşyalarınızı ulaştırıyoruz.</p>
-            </div>
-         </div>
-
-         <!-- Hizmet 4 -->
-         <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="p-4 rounded-4 shadow-sm h-100 text-center position-relative" style="border: 1px solid #e1e1e1; background-color: #fff;">
-               <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger" style="font-size: 0.75rem; padding: 5px 10px;">%100 Planlı</span>
-               <div class="mb-3 mt-2" style="color: #d62f2f;"><i class="fas fa-briefcase fa-3x"></i></div>
-               <h3 class="h5 fw-bold mb-2">Ofis & İş Yeri Taşıma</h3>
-               <hr class="text-danger mx-auto my-2" style="width: 40px; height: 3px; opacity: 1;">
-               <p class="text-muted small" style="text-align: justify; text-justify: inter-word;">Şirketinizin bilgisayar, evrak ve ağır ofis mobilyalarını operasyonel süreçlerinize zarar vermeden, hızlı ve planlı bir şekilde yeni adresine naklediyoruz.</p>
-            </div>
-         </div>
-
-         <!-- Hizmet 5 -->
-         <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="p-4 rounded-4 shadow-sm h-100 text-center position-relative" style="border: 1px solid #e1e1e1; background-color: #fff;">
-               <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger" style="font-size: 0.75rem; padding: 5px 10px;">%100 Uygun Fiyat</span>
-               <div class="mb-3 mt-2" style="color: #d62f2f;"><i class="fas fa-box-open fa-3x"></i></div>
-               <h3 class="h5 fw-bold mb-2">Parça Eşya & Öğrenci Evi</h3>
-               <hr class="text-danger mx-auto my-2" style="width: 40px; height: 3px; opacity: 1;">
-               <p class="text-muted small" style="text-align: justify; text-justify: inter-word;">Görükle bölgesindeki öğrencilerimiz ve az miktarda eşyası olan müşterilerimiz için büyük araç maliyeti çıkarmadan, ekonomik fiyatlarla parça eşya taşıyoruz.</p>
-            </div>
-         </div>
-
-         <!-- Hizmet 6 -->
-         <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="p-4 rounded-4 shadow-sm h-100 text-center position-relative" style="border: 1px solid #e1e1e1; background-color: #fff;">
-               <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger" style="font-size: 0.75rem; padding: 5px 10px;">%100 Korumalı</span>
-               <div class="mb-3 mt-2" style="color: #d62f2f;"><i class="fas fa-people-carry-box fa-3x"></i></div>
-               <h3 class="h5 fw-bold mb-2">Profesyonel Paketleme</h3>
-               <hr class="text-danger mx-auto my-2" style="width: 40px; height: 3px; opacity: 1;">
-               <p class="text-muted small" style="text-align: justify; text-justify: inter-word;">Kırılacak hassas mutfak eşyalarınızdan beyaz eşyalarınıza kadar her şeyi birinci kalite patpat balonlu naylonlar ve kalın kolilerle muhafaza altına alıyoruz.</p>
-            </div>
-         </div>
-      </div>
-
-      <!-- WhatsApp Teklif Al Butonu -->
-      <div class="text-center mt-5" data-aos="fade-up">
-         <a href="https://wa.me/905548441691?text=Merhaba,%20nakliyat%20hizmetleriniz%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
-            target="_blank" 
-            class="btn btn-success btn-lg rounded-pill px-5 py-3 fw-bold shadow" 
-            style="background-color: #25d366; border-color: #25d366; font-size: 1.15rem; transition: all 0.3s ease;">
-            <i class="fab fa-whatsapp me-2 fa-lg"></i> WhatsApp ile Hızlı Teklif Al
-         </a>
-      </div>
-   </div>
-</section>
-     
+        </div>
+    </div>
+</div>
+      
       <!-- FOOTER (Link Hataları Düzeltildi) -->
       <footer>
          <div class="container">
@@ -268,18 +257,38 @@
       <script src="js/jquery.magnific-popup.min.js"></script>
       <!-- Main js -->
       <script src="js/main.js"></script>
+<!-- Leaflet.js JS (Harita İşlevleri için) -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <script>
-  var swiper = new Swiper(".commentSwiper", {
-    loop: true,
-    autoplay: {
-      delay: 15000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+ // 1. Görükle Paradise Apart Otel gerçek koordinatları
+    const realLat = 40.234452;
+    const realLng = 28.841275;
+
+    // 2. Harita nesnesini oluştur ve merkez olarak bu koordinatları ayarla (Zoom seviyesini 200m için 15 olarak güncelledim)
+    const map = L.map('map').setView([realLat, realLng], 15);
+
+    // 3. OpenStreetMap harita katmanını ekle
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap katkıcıları'
+    }).addTo(map);
+
+    // 4. Noktasal gizlilik için haritaya 200 metre yarıçapında şık bir daire çiziyoruz
+    const circle = L.circle([realLat, realLng], {
+        color: '#d83a1e',       // Logo rengine uyan turuncu/kırmızı tonu
+        fillColor: '#d83a1e',   
+        fillOpacity: 0.15,      
+        radius: 200             // Tam 200 metre yarıçap
+    }).addTo(map);
+
+    // 5. Dairenin tam ortasına genel bir marker ekliyoruz
+    const marker = L.marker([realLat, realLng]).addTo(map);
+    marker.bindPopup("<b>Bursa Halil Nakliyat</b><br>Bu genel bölge içerisinde hizmet vermekteyiz.").openPopup();
+
+    // 6. Harita yükleme düzeltmesi
+    setTimeout(function() {
+        map.invalidateSize();
+    }, 200);
 </script>
    </body>
 </html>

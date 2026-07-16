@@ -21,20 +21,57 @@
    <link rel="stylesheet" href="css/style.css" />
 </head>
    <body>
-      <!-- ============================================================
+       <!-- ============================================================
          TOP BAR
          ============================================================ -->
-      <div id="topbar">
-         <div class="container">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-               <div class="top-contact d-flex flex-wrap">
-                  <span><i class="fas fa-phone-alt"></i><a href="tel:+905548441691">0554 844 16 91</a></span>
-                  <span><i class="fas fa-envelope"></i><a href="mailto:mega.sus20@gmail.com">mega.sus20@gmail.com</a></span>
-                  <span><i class="fas fa-map-marker-alt"></i>Görükle/Bursa</span>
-               </div>
-               <div class="d-flex align-items-center gap-3">
-                  <span class="ttag"><i class="fas fa-fire me-1"></i>Nakliye İçin İletişime Geçin!</span>
-                  <div class="tsoc">
+<div id="topbar" class="py-2 bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center gy-3">
+      
+      <!-- Sol Taraf: İletişim Bilgileri (Mobilde alt alta, masaüstünde yan yana) -->
+<!-- Sol Taraf: İletişim Bilgileri (Küçük ekranda alt alta temiz durur, lg ve üzerinde tek satırda yan yana dizilir) -->
+<div class="col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-start align-items-center gap-3">
+  
+  <div class="d-flex align-items-center justify-content-center">
+    <a href="tel:05548441691" class="text-white text-decoration-none small d-inline-flex align-items-center gap-2">
+      <i class="fas fa-phone-alt" style="color: var(--primary);"></i> 0554 844 16 91
+    </a>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center">
+    <a href="mailto:mega.sus20@gmail.com" class="text-white text-decoration-none small d-inline-flex align-items-center gap-2">
+      <i class="fas fa-envelope" style="color: var(--primary);"></i> mega.sus20@gmail.com
+    </a>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center">
+    <span class="small d-inline-flex align-items-center gap-2 text-white">
+      <i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Görükle/Bursa
+    </span>
+  </div>
+
+</div>
+
+      <!-- Sağ Taraf: WhatsApp Butonu ve Sosyal Medya (Mobilde alt alta, masaüstünde yan yana) -->
+      <div class="col-12 col-lg-5 d-flex flex-column flex-sm-row justify-content-center justify-content-lg-end align-items-center gap-3">
+        <!-- WhatsApp Butonu -->
+        <a href="https://wa.me/905548441691?text=Merhaba,%20nakliye%20hizmetleriniz%20hakkında%20fiyat%20teklifi%20almak%20istiyorum." 
+           target="_blank" 
+           class="text-white text-decoration-none small d-inline-flex align-items-center gap-2 px-3 py-2 rounded" 
+           style="background-color: #25D366; font-weight: 600;">
+          <i class="fab fa-whatsapp"></i> WhatsApp ile Hızlı Teklif Al
+        </a>
+        
+        <!-- Sosyal Medya İkonları -->
+        <!-- <div class="d-flex align-items-center gap-2">
+          <a href="#" class="text-white-50 text-decoration-none small"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white-50 text-decoration-none small ms-2"><i class="fab fa-instagram"></i></a>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</div><div class="tsoc">
                      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                   </div>
@@ -71,83 +108,172 @@
          </div>
       </nav>
  
-      <!-- ============================================================
-         HISTORY (SEO & Mantık Hataları Düzenlendi)
-         ============================================================ -->
+ <!-- ============================================================
+           HISTORY (Temiz, Tekrarsız HTML & Responsive CSS Yapısı)
+           ============================================================ -->
+      <style>
+         /* --- GENEL / MOBİL TASARIM (Ön tanımlı olarak Mobil Uyumlu: Hepsi Sağa Açılır) --- */
+         #history {
+            padding: 80px 0;
+            background-color: #faf6f0; /* Şablonun krem rengi arka planı */
+         }
+         #history .timeline {
+            position: relative;
+            padding: 30px 0;
+            margin-top: 40px;
+         }
+         /* Dikey Çizgi (Mobilde Sola Hizalı) */
+         #history .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px; /* Çizgi solda */
+            width: 2px;
+            background-color: #e65f3a; /* Şablonun turuncu/kırmızı çizgi rengi */
+         }
+         /* Her bir zaman tüneli satırı */
+         #history .tli {
+            position: relative;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 50px; /* Çizgiden sonra içerik boşluğu */
+         }
+         /* Zaman tüneli noktası (Mobilde Sola Hizalı) */
+         #history .tldot {
+            position: absolute;
+            left: 11px; /* Çizginin tam üzerine denk gelecek şekilde */
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 4px solid #e65f3a;
+            z-index: 2;
+         }
+         #history .tlyear {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e65f3a;
+            margin-bottom: 5px;
+         }
+         #history h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 10px;
+         }
+         #history p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+         }
+
+         /* --- TABLET VE ÜSTÜ EKRANLAR (992px ve Üzeri: Sağlı / Sollu Simetrik Düzen) --- */
+         @media (min-width: 992px) {
+            /* Çizgiyi Tam Ortaya Alıyoruz */
+            #history .timeline::before {
+               left: 50%;
+               transform: translateX(-50%);
+            }
+            #history .tli {
+               flex-direction: row;
+               padding-left: 0;
+               margin-bottom: 60px;
+               width: 100%;
+            }
+            /* Noktayı Ortaya Alıyoruz */
+            #history .tldot {
+               left: 50%;
+               transform: translateX(-50%);
+               top: 10px;
+            }
+            /* İçerik Kutusu (Geniş ekranda genişliğin yarısını kaplayacak) */
+            #history .tl-content {
+               width: 45%;
+               position: relative;
+            }
+            
+            /* TEK YILLAR (2021, 2025) -> SOLDA Görünecek */
+            #history .tli:nth-child(odd) {
+               justify-content: flex-start;
+            }
+            #history .tli:nth-child(odd) .tl-content {
+               text-align: right;
+               padding-right: 30px;
+            }
+
+            /* ÇİFT YILLAR (2023, 2026) -> SAĞDA Görünecek */
+            #history .tli:nth-child(even) {
+               justify-content: flex-end;
+            }
+            #history .tli:nth-child(even) .tl-content {
+               text-align: left;
+               padding-left: 30px;
+            }
+         }
+      </style>
+
       <section id="history">
          <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                <span class="slbl">Yolculuğumuz</span>
-               <!-- SEO için sayfa ana başlığı H1 olarak eklendi -->
                <h1 class="stitle" style="font-size: 2.5rem;">Bursa Halil Nakliyat <span>Tarihi</span></h1>
                <div class="sline"></div>
-                  <p class="text-muted mx-auto" style="max-width: 600px; text-align: justify; text-justify: inter-word;">
-                     Mütevazı başlangıçlardan şehrin en güvenilen nakliyat markasına uzanan yolculukta, her kilometre tutkuyla ve güvenle katedildi.
-                  </p>            
-               </div>
+               <p class="sdesc mx-auto" style="max-width: 600px; text-align: justify; text-justify: inter-word;">
+                  Mütevazı başlangıçlardan şehrin en güvenilen nakliyat markasına uzanan yolculukta, her kilometre tutkuyla ve güvenle katedildi.
+               </p>
+            </div>
+            
             <div class="timeline" data-aos="fade-up">
-               <!-- 2021 -->
+               
+               <!-- 2021 (Mobilde Sağa, Masaüstünde Sola Hizalanır) -->
                <div class="tli">
-                  <div class="tl-left">
+                  <div class="tldot"></div>
+                  <div class="tl-content">
                      <div class="tlyear">2021</div>
-                     <h2>Hizmetin Doğuşu ve İlk Adımlar</h2>
-                     <p>Halil Nakliyat, sektöre ilk tekil taşıma aracı ve yüksek müşteri memnuniyeti hedefiyle adım attı. Taşıdıığımız her evde gösterdiğimiz özen sayesinde ünümüz hızla yayıldı ve yerel nakliye firmalarından biri haline geldik.</p>
-                  </div>
-                  <div class="tl-center">
-                     <div class="tldot"></div>
-                  </div>
-                  <div class="tl-right">
-                     <!-- Mobil ve asimetrik tasarımlarda boşluk bozulmasın diye sağ taraf temiz tutuldu -->
+                     <h5>Hizmetin Doğuşu ve İlk Adımlar</h5>
+                     <p>Halil Nakliyat, sektöre ilk tekil taşıma aracı ve yüksek müşteri memnuniyeti hedefiyle adım attı. Taşıdığımız her evde gösterdiğimiz özen sayesinde ünümüz hızla yayıldı ve yerel nakliye firmalarından biri haline geldik.</p>
                   </div>
                </div>
                
-               <!-- 2023 -->
+               <!-- 2023 (Mobilde Sağa, Masaüstünde Sağa Hizalanır) -->
                <div class="tli">
-                  <div class="tl-left">
-                     <!-- Alternatif düzen korundu -->
-                  </div>
-                  <div class="tl-center">
-                     <div class="tldot"></div>
-                  </div>
-                  <div class="tl-right">
+                  <div class="tldot"></div>
+                  <div class="tl-content">
                      <div class="tlyear">2023</div>
-                     <h2>Filo Genişlemesi ve Profesyonel Kadro</h2>
+                     <h5>Filo Genişlemesi ve Profesyonel Kadro</h5>
                      <p>Vizyonumuzu genişleterek araç filomuzu modernize ettik ve alanında uzman, eğitimli taşıma ekiplerini bünyemize kattık. Asansörlü taşımacılık ve özel paketleme sistemlerimizi devreye alarak, hizmet kalitemizi yeni zirvelere taşıdık.</p>
                   </div>
                </div>
                
-               <!-- 2025 -->
+               <!-- 2025 (Mobilde Sağa, Masaüstünde Sola Hizalanır) -->
                <div class="tli">
-                  <div class="tl-left">
+                  <div class="tldot"></div>
+                  <div class="tl-content">
                      <div class="tlyear">2025</div>
-                     <h2>Şehirler Arası Ağ ve Güvenli Lojistik</h2>
+                     <h5>Şehirler Arası Ağ ve Güvenli Lojistik</h5>
                      <p>Hizmet kalitemizi hız ve güvenle birleştirerek imza niteliğindeki şehirler arası taşımacılık hattımızı piyasaya sürdük. Genişleyen lojistik ağımız sayesinde yıl içinde yüzlerce aileyi ve ofisi yeni adreslerine ulaştırdık.</p>
-                  </div>
-                  <div class="tl-center">
-                     <div class="tldot"></div>
-                  </div>
-                  <div class="tl-right">
-                     <!-- Boş -->
                   </div>
                </div>
                
-               <!-- 2026 -->
+               <!-- 2026 (Mobilde Sağa, Masaüstünde Sağa Hizalanır) -->
                <div class="tli">
-                  <div class="tl-left">
-                     <!-- Boş -->
-                  </div>
-                  <div class="tl-center">
-                     <div class="tldot"></div>
-                  </div>
-                  <div class="tl-right">
+                  <div class="tldot"></div>
+                  <div class="tl-content">
                      <div class="tlyear">2026</div>
-                     <h2>Ulusal Güven ve Dijital Dönüşüm</h2>
+                     <h5>Ulusal Güven ve Dijital Dönüşüm</h5>
                      <p>Şu anda Türkiye genelinde geniş bir hizmet ağında faaliyet gösteren, modern takip sistemleriyle donatılmış ve aylık yüzlerce operasyonu başarıyla yöneten nakliyat platformumuz, tecrübesiyle büyümeye devam ediyor.</p>
                   </div>
                </div>
+
             </div>
          </div>
       </section>
+ 
+
 <section id="mission-vision" class="py-5 bg-light">
    <div class="container">
       <div class="row g-4">

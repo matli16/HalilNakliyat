@@ -22,16 +22,54 @@
       <!-- ============================================================
          TOP BAR
          ============================================================ -->
-      <div id="topbar">
-         <div class="container">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-               <div class="top-contact d-flex flex-wrap">
-                  <span><i class="fas fa-phone-alt"></i><a href="tel:+905548441691">0554 844 16 91</a></span>
-                  <span><i class="fas fa-envelope"></i><a href="mailto:mega.sus20@gmail.com">mega.sus20@gmail.com</a></span>
-                  <span><i class="fas fa-map-marker-alt"></i>Görükle/Bursa</span>
-               </div>
-               <div class="d-flex align-items-center gap-3">
-                  <span class="ttag"><i class="fas fa-fire me-1"></i>Nakliye İçin İletişime Geçin!</span>
+<div id="topbar" class="py-2 bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center gy-3">
+      
+      <!-- Sol Taraf: İletişim Bilgileri (Mobilde alt alta, masaüstünde yan yana) -->
+<!-- Sol Taraf: İletişim Bilgileri (Küçük ekranda alt alta temiz durur, lg ve üzerinde tek satırda yan yana dizilir) -->
+<div class="col-12 col-lg-7 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-start align-items-center gap-3">
+  
+  <div class="d-flex align-items-center justify-content-center">
+    <a href="tel:05548441691" class="text-white text-decoration-none small d-inline-flex align-items-center gap-2">
+      <i class="fas fa-phone-alt" style="color: var(--primary);"></i> 0554 844 16 91
+    </a>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center">
+    <a href="mailto:mega.sus20@gmail.com" class="text-white text-decoration-none small d-inline-flex align-items-center gap-2">
+      <i class="fas fa-envelope" style="color: var(--primary);"></i> mega.sus20@gmail.com
+    </a>
+  </div>
+
+  <div class="d-flex align-items-center justify-content-center">
+    <span class="small d-inline-flex align-items-center gap-2 text-white">
+      <i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Görükle/Bursa
+    </span>
+  </div>
+
+</div>
+
+      <!-- Sağ Taraf: WhatsApp Butonu ve Sosyal Medya (Mobilde alt alta, masaüstünde yan yana) -->
+      <div class="col-12 col-lg-5 d-flex flex-column flex-sm-row justify-content-center justify-content-lg-end align-items-center gap-3">
+        <!-- WhatsApp Butonu -->
+        <a href="https://wa.me/905548441691?text=Merhaba,%20nakliye%20hizmetleriniz%20hakkında%20fiyat%20teklifi%20almak%20istiyorum." 
+           target="_blank" 
+           class="text-white text-decoration-none small d-inline-flex align-items-center gap-2 px-3 py-2 rounded" 
+           style="background-color: #25D366; font-weight: 600;">
+          <i class="fab fa-whatsapp"></i> WhatsApp ile Hızlı Teklif Al
+        </a>
+        
+        <!-- Sosyal Medya İkonları -->
+        <!-- <div class="d-flex align-items-center gap-2">
+          <a href="#" class="text-white-50 text-decoration-none small"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white-50 text-decoration-none small ms-2"><i class="fab fa-instagram"></i></a>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</div>
                   <div class="tsoc">
                      <a href="#"><i class="fab fa-facebook-f"></i></a>
                      <a href="#"><i class="fab fa-instagram"></i></a>
@@ -259,8 +297,8 @@
       <!-- FOOTER -->
       <footer>
          <div class="container">
-            <div class="row g-5">
-               <div class="col-lg-4">
+            <div class="row g-5 col-sm-12">
+               <div class="col-sm-12  col-md-6 col-lg-4">
                   <div class="fnm">BursaHalil<span>Nakliye</span></div>
                   <p class="fdesc">Türkiyenin En Uygun Ve Profesyonel Nakliyecisi.</p>
                   <div class="fsoc">
@@ -268,14 +306,14 @@
                      <a href="#"><i class="fab fa-instagram"></i></a>
                   </div>
                </div>
-               <div class="col-sm-6 col-lg-2">
+               <div class="col-sm-12  col-md-6 col-lg-2">
                   <div class="ftit">Hızlı lİNK</div>
                   <ul class="flinks ps-0">
                      <li><a href="#hero"><i class="fas fa-chevron-right"></i>Anasayfa</a></li>
 
                   </ul>
                </div>
-               <div class="col-sm-6 col-lg-2">
+               <div class="col-sm-12  col-md-6 col-lg-2">
                   <div class="ftit">Menü</div>
                   <ul class="flinks ps-0">
                      <li><a href="#about"><i class="fas fa-chevron-right"></i>Kurumsal</a></li>
@@ -284,21 +322,21 @@
                      <li><a href="#contact-section"><i class="fas fa-chevron-right"></i>İletişim</a></li>
                   </ul>
                </div>
-               <div class="col-lg-4">
+               <div class="col-sm-12  col-md-6 col-lg-4">
                   <div class="ftit">İletişime Geçin</div>
-                  <div class="fci">
+                  <div class="fci text-center">
                      <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
                      <div class="fciinfo"><strong>Adres</strong> Görükle / Bursa </div>
                   </div>
-                  <div class="fci">
+                  <div class="fci text-center">
                      <div class="fciico"><i class="fas fa-phone-alt"></i></div>
                      <div class="fciinfo"><strong>Tel:</strong><a href="tel:+905548441691">0554 844 16 91</a></div>
                   </div>
-                  <div class="fci">
+                  <div class="fci text-center">
                      <div class="fciico"><i class="fas fa-envelope"></i></div>
                      <div class="fciinfo"><strong>E-posta</strong><a href="mailto:mega.sus20@gmail.com" style="color:white !important">mega.sus20@gmail.com</a></div>
                   </div>
-                  <div class="fci">
+                  <div class="fci text-center">
                      <div class="fciico"><i class="fas fa-clock"></i></div>
                      <div class="fciinfo"><strong>Her Gün</strong>7 / 24 İletişime Geçebilirsiniz</div>
                   </div>
