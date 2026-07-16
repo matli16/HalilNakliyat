@@ -339,14 +339,21 @@ section {
 }
 
 /* ===================== HERO ===================== */
-#hero {
+/* #hero {
+background-image: url("../img/slider/wp2.jpeg"); 
+min-height: 92vh;  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+} */
+ #hero {
   background: var(--cream);
   min-height: 92vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-}
+} 
 .hbgtxt {
   position: absolute;
   top: 50%;
@@ -485,7 +492,7 @@ section {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin-top: 12px;
 }
 .hstat .snum {
   font-family: "Playfair Display", serif;
